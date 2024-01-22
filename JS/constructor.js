@@ -14,28 +14,29 @@ function Employee(id, name, dep, lev, img) {
   this.department = dep;
   this.level = lev;
   this.imgURL = img;
-  this.salary = 0;
+  this.salaryValue();
   // // // // // // // // // //
+  arr.push(this);
 }
 
-Employee.prototype.salaryValue = function (level) {
-  if (level === "Senior") {
+Employee.prototype.salaryValue = function () {
+  this.salary = 0;
+  if (this.level === "Senior") {
     let min, max;
     min = 1500;
     max = 2000;
     this.salary += Math.floor(Math.random() * (max - min) + min) * 0.925;
-  } else if (level === "Mid-Senior") {
+  } else if (this.level === "Mid-Senior") {
     let min, max;
     min = 1000;
     max = 1500;
     this.salary += Math.floor(Math.random() * (max - min) + min) * 0.925;
-  } else if (level === "Junior") {
+  } else if (this.level === "Junior") {
     let min, max;
     min = 500;
     max = 1000;
     this.salary += Math.floor(Math.random() * (max - min) + min) * 0.925;
   }
-  arr.push(this);
 };
 
 // // // // // // // // // // //
@@ -46,10 +47,12 @@ let ghazi = new Employee(
   "Senior",
   "randon url"
 );
-ghazi.salaryValue("Senior");
+
+// ghazi.salaryValue("Senior");
+
 // // // // // // // // // // //
 let lana = new Employee(1000, "Lana Ali", "Finance", "Senior", "randon url");
-lana.salaryValue("Senior");
+// lana.salaryValue("Senior");
 // // // // // // // // // // //
 let tamara = new Employee(
   1001,
@@ -58,7 +61,7 @@ let tamara = new Employee(
   "Senior",
   "randon url"
 );
-tamara.salaryValue("Senior");
+// tamara.salaryValue("Senior");
 // // // // // // // // // // //
 let safi = new Employee(
   1002,
@@ -67,7 +70,7 @@ let safi = new Employee(
   "Mid-Senior",
   "randon url"
 );
-safi.salaryValue("Mid-Senior");
+// safi.salaryValue("Mid-Senior");
 // // // // // // // // // // //
 let omar = new Employee(
   1003,
@@ -76,7 +79,7 @@ let omar = new Employee(
   "Senior",
   "randon url"
 );
-omar.salaryValue("Senior");
+// omar.salaryValue("Senior");
 // // // // // // // // // // //
 let rana = new Employee(
   1004,
@@ -85,7 +88,7 @@ let rana = new Employee(
   "Junior",
   "randon url"
 );
-rana.salaryValue("Junior");
+// rana.salaryValue("Junior");
 // // // // // // // // // // //
 let hadi = new Employee(
   1005,
@@ -94,7 +97,7 @@ let hadi = new Employee(
   "Mid-Senior",
   "randon url"
 );
-hadi.salaryValue("Mid-Senior");
+// hadi.salaryValue("Mid-Senior");
 // // // // // // // // // // //
 console.log(arr);
 //
