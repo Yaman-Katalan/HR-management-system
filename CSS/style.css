@@ -159,6 +159,17 @@ header .container ul li a {
         margin-bottom: calc(100vh - 104px - 73.2px);
     } */
 
+    .employee-card {
+        border: 3px solid gray;
+        padding: 10px;
+        /* margin: 10px; */
+        width: 200px;
+        text-align: center;
+      }
+      .employee-card img {
+        width: 150px;
+      }
+
     /* End Home */
 
     /* Start Accounting */
