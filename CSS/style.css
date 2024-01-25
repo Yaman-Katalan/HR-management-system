@@ -290,10 +290,6 @@ header .container ul li a {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;        
     }
 
-    main div#employeeList .box.static span {
-        
-    }
-
     main div#employeeList .box img {
         max-width: 100%;
     }
